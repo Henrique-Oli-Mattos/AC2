@@ -24,6 +24,15 @@ public class Pessoa {
      telefone = f;
     }
     
+    public boolean verifLogin(String a, String b){
+        if(a.equals(this.email) && b.equals(this.password)){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    
     public void PrintPessoa(){
         System.out.println("========================");
         System.out.println(this.email);

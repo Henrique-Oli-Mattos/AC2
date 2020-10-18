@@ -1,11 +1,17 @@
 
 package lhama;
+
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Henrique
  */
 public class UILhamaLogin extends javax.swing.JFrame {
     int LoginAlo = 0;
+    int ButPre = 0;
+    String email;
+    String senha;
     
     public UILhamaLogin() {
         initComponents();
@@ -21,18 +27,19 @@ public class UILhamaLogin extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        Text2 = new javax.swing.JTextField();
-        Text1 = new javax.swing.JTextField();
+        txtEmail = new javax.swing.JTextField();
         EnterBot = new javax.swing.JButton();
         CadBot = new javax.swing.JButton();
+        txtSenha = new javax.swing.JPasswordField();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel1.add(Text2, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 340, 370, 60));
-        jPanel1.add(Text1, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 260, 370, 60));
+
+        txtEmail.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jPanel1.add(txtEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 260, 370, 60));
 
         EnterBot.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lhama/botão.png"))); // NOI18N
         EnterBot.setBorder(null);
@@ -53,6 +60,9 @@ public class UILhamaLogin extends javax.swing.JFrame {
         });
         jPanel1.add(CadBot, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 410, -1, -1));
 
+        txtSenha.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jPanel1.add(txtSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 340, 370, 60));
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lhama/login Lhama.png"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -68,7 +78,21 @@ public class UILhamaLogin extends javax.swing.JFrame {
     }//GEN-LAST:event_CadBotActionPerformed
 
     private void EnterBotActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EnterBotActionPerformed
-        dispose();
+        email = txtEmail.getText();
+        senha = txtSenha.getText();
+        ButPre = 1;
+        
+        
+        if(email.equals("") || senha.equals("")){
+            JOptionPane.showMessageDialog (null, "Campo não preeenchido ou login invalido, Tente novamente");
+            ButPre = 0;
+        }
+        else{
+            
+        }
+        
+        
+        
     }//GEN-LAST:event_EnterBotActionPerformed
 
     /**
@@ -109,9 +133,9 @@ public class UILhamaLogin extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton CadBot;
     private javax.swing.JButton EnterBot;
-    private javax.swing.JTextField Text1;
-    private javax.swing.JTextField Text2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField txtEmail;
+    private javax.swing.JPasswordField txtSenha;
     // End of variables declaration//GEN-END:variables
 }

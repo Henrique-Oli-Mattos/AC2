@@ -45,17 +45,27 @@ public class UILhamaCad extends javax.swing.JFrame {
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        CPFtext.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         CPFtext.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CPFtextActionPerformed(evt);
             }
         });
         jPanel1.add(CPFtext, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 430, 370, 60));
+
+        email.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jPanel1.add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 350, 370, 60));
+
+        name.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jPanel1.add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 350, 370, 60));
+
+        senha.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jPanel1.add(senha, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 430, 370, 60));
+
+        tel.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jPanel1.add(tel, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 510, 200, 60));
 
+        date.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         date.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 dateActionPerformed(evt);
